@@ -11,17 +11,22 @@
 
 	</div>
 	<div>
-		<form>
+		<form action="connection.php" method="post">
 			<h3>Ingresar Producto</h3>
-			<input type="text" name="txtProduct" placeholder="Ingrese nombre del Producto" id="txtProduct" pattern="[a-zA-Z]{3,50}" onclick="validarte();" required><br><br>
-			<input type="text" name="txtPrice" id="txtPrice" placeholder="Precio" onclick="validardeci();" pattern="[0-9]" required><br><br>
-			<select id="txtActive" patter="[1||0]" required>
+			<input type="text" name="product_name" placeholder="Ingrese nombre del Producto" id="txtProduct" pattern="[a-zA-Z]{3,50}" required><br><br>
+
+
+			<input type="text" name="price" id="txtPrice" placeholder="Precio" pattern="[0-9]*" required><br><br>
+
+
+			<select name="is_active" pattern="[1||0]" required>
 				<option></option>
 				<option value="1">Activo</option>
-				<option value="0">Inactivo</option>
+				<option value="2">Inactivo</option>
 			</select>
+
 			<br><br>
-			<input type="submit" name="txtGuardar">
+			<input type="submit" name="txtGuardar" value="Guardar">
 
 		</form>
 	</div>
