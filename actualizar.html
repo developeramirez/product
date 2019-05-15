@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div>
+		<a href="index.html">Agregar Producto </a>
+		<a href="actualizar.html">Actualizar Producto </a>
+
+	</div>
+	<div>
+		<form>
+			<h3>Ingresar Producto</h3>
+			
+			<input type="text" name="txtPrice" id="txtPrice" placeholder="Precio" pattern="[0-9]" required><br><br>
+			<select id="txtActive" patter="[1||0]" required>
+				<option value="1">Activo</option>
+				<option value="0">Inactivo</option>
+			</select>
+			<br><br>
+			<input type="submit" name="txtGuardar">
+
+		</form>
+	</div>
+</body>
+</html>
