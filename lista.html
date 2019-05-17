@@ -2,34 +2,51 @@
 <html>
 <head>
 	<title>Lista</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<div>
+		<a href="index.html">Agregar Producto </a>
+		<a href="actualizar.html">Actualizar Producto </a>
+		<a href="lista.html">Lista Producto </a>
 
-
-<?php
-
-
-$servername= "localhost";
-$username= "root";
-$password = "captan123@*";
-$dbname = "products";
-
-
-try{
-
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username,$password);
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = "select * from product";
-	$conn -> exec($sql);
-	echo "correcto";
-	header('Location: lista.html');
-
-}catch(PDOException $e){
-	echo $sql . $e->getMessage();
-
-}
-$conn = null;
-
-?>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td>Product Name</td>
+				<td>Precio</td>
+				<td>Estado</td>
+			</tr>
+			<tr>
+				<td>Ranitidina</td>
+				<td>2.50</td>
+				<td>Activo</td>
+				<td><a href="actualizar.html">Modificar</a></td>
+				<td><a href="#">Eliminar</a></td>
+			</tr>
+			<tr>
+				<td>Margarita</td>
+				<td>25</td>
+				<td>Activo</td>
+				<td><a href="actualizar.html">Modificar</a></td>
+				<td><a href="#">Eliminar</a></td>
+			</tr>
+			<tr>
+				<td>Orgamo con Vodka</td>
+				<td>7.80</td>
+				<td>Inactivo</td>
+				<td><a href="actualizar.html">Modificar</a></td>
+				<td><a href="#">Eliminar</a></td>
+			</tr>
+			<tr>
+				<td>Tequila Doble</td>
+				<td>40</td>
+				<td>Activo</td>
+				<td><a href="actualizar.html">Modificar</a></td>
+				<td><a href="#">Eliminar</a></td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
